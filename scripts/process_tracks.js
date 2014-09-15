@@ -1,3 +1,7 @@
+// simple java-script example to show tracks on a leaflet map
+
+// martin lampacher
+
 // gen_tracks.js includes the list_gpx_tracks
 // generated from the xls source-sheet
 

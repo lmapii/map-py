@@ -1,0 +1,9 @@
+[submodule "ressources/leaflet-omnivore-master"]
+	path = ressources/leaflet-omnivore-master
+	url = git://github.com/mapbox/leaflet-omnivore.git
+[submodule "ressources/leaflet.MakiMarkers-master"]
+	path = ressources/leaflet.MakiMarkers-master
+	url = git://github.com/jseppi/Leaflet.MakiMarkers.git
+[submodule "ressources/leaflet.markercluster-master"]
+	path = ressources/leaflet.markercluster-master
+	url = git://github.com/Leaflet/Leaflet.markercluster.git

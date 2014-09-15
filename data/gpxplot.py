@@ -1,3 +1,8 @@
+# simple python script to parse .gpx files to
+# poly-lines and/or reduce points (greatly reduces file-size)
+
+# martin lampacher
+
 import sys
 import datetime
 import getopt
@@ -19,7 +24,7 @@ GPX11 = '{http://www.topografix.com/GPX/1/1}'
 
 #
 # simple class to parse the .gpx file to a polyline
-# supported by leaflet. gpx parser stuff:
+# supported by leaflet. gpx parser stuff adapted from
 # 
 # (c) Sergey Astanin <s.astanin@gmail.com> 2008
 #

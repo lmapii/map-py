@@ -1,3 +1,11 @@
+# python script to process data from a custom spreadsheet
+# containing all the marker information and GPX tracks
+# which should be shown on a leaflet map. also generates smaller
+# GPX tracks which can then be simply shown on a GPS device
+
+# martin lampacher
+
+
 import logging 
 import argparse
 import os.path

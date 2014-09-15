@@ -1,3 +1,7 @@
+// simple java-script example to show markers on a leaflet map
+
+// martin lampacher
+
 // gen_markers.js includes the list_markers
 // generated from the xls source-sheet
 
