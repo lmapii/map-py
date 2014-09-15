@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>TR15A - route and POIs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0,
+        maximum-scale=1.0, user-scalable=no' />
+
+    <!-- usable tiles from mapbox -->
+    <!-- <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'>
+    </script> -->
+
+    <!-- include leaflet itself -->
+    <script src="./ressources/leaflet/leaflet.js">
+    </script>
+
+    <!-- importing of .gpx files as routes / tracks -->
+    <script src='./ressources/leaflet-omnivore-master/leaflet-omnivore.js'>
+    </script>
+
+    <!-- markers with icons from makimarkers -->
+    <script src='./ressources/leaflet.MakiMarkers-master/Leaflet.MakiMarkers.js'>
+    </script>
+
+    <!-- handles grouping of markers -->
+    <script src="./ressources/leaflet.markercluster-master/dist/leaflet.markercluster-src.js">
+    </script>
+
+    <!-- default leaflet style-sheet -->    
+    <link rel="stylesheet" href="./ressources/leaflet/leaflet.css" />
+
+    <!-- default style sheet for animated markers -->    
+    <link rel="stylesheet" href="./ressources/leaflet.markercluster-master/dist/MarkerCluster.css" />
+
+    <!-- custom style sheet for the markers -->
+    <link rel="stylesheet" href="./css/marker.css" />
+
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+    <div id='map'></div>
+    <script src="./scripts/map_main.js"  ></script> 
+    <script>
+        // configuration for process_tracks.js
+        track_cfg = {
+              do_execute          : true
+            , track_list          : [] // ["ecuador_opt", "peru_opt", "bolivia_opt", "argentina_opt"]
+            , hide_tracks         : true
+            , display_gpx_data    : false
+            , display_poly_data   : true
+            , display_mono        : false
+        };
+
+        // configuration for process_markers.js
+        marker_cfg = {
+              do_execute                 : true
+            , group_list                 : [] // ["misc"]
+            , hide_groups                : true
+
+            , showCoverageOnHover        : true
+            , spiderfyOnMaxZoom          : false
+            , removeOutsideVisibleBounds : false
+            , disableClusteringAtZoom    : 12
+            , maxClusterRadius           : 120
+        };
+    </script>
+    <script src="./scripts/map_params.js"  ></script> 
+    <script src="./scripts/gen_PLAN_marker_data.js"  ></script> 
+    <script src="./scripts/gen_PLAN_tracks_data.js"  ></script> 
+    <!-- // <script src="./scripts/man_darien.js"  ></script>  -->
+    <script src="./scripts/process_markers.js" ></script> 
+    <script src="./scripts/process_tracks.js" ></script> 
+</body>
+</html>
